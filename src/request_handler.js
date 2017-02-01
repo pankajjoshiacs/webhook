@@ -1,6 +1,7 @@
 'use strict';
 
 var notify_request = require('./libs/http_request.js');
+var config = require('config');
 
 exports.processRequest = function(req, res) {
 	var body = JSON.parse(req.body);
@@ -15,9 +16,9 @@ exports.processRequest = function(req, res) {
 		}
 		if (e.type === 'story') {
 
-			var host = 'your_host_url';
-			var path = '/path/to/your/server/where/events/will/be/processed/' + projectId + "/" + e.parent + "/" + e.resource;
-			console.log(host + path);
+			var host = config.service.host;
+			var path = config.service.path + projectId + "/" + e.parent + "/" + e.resource;
+
 			notify_request.execute(host, path, 'GET', {}, []);
 		}
 	}

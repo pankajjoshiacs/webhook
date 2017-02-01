@@ -2,6 +2,7 @@
 
 var http = require('http');
 var net = require('net');
+var config = require('config');
 
 
 exports.handler = function(event, context) {
@@ -66,8 +67,8 @@ exports.handler = function(event, context) {
                 var projectId = req.pathParameters.proxy;
 
                 bool = true;
-                var host = 'your_host_url';
-                var path = '/path/to/your/server/where/events/will/be/processed/' + projectId + "/" + taskId + "/" + storyIds;
+                var host = config.service.host;
+                var path = config.service.path + projectId + "/" + taskId + "/" + storyIds;
                 console.log('notify url.....', host + path);
                 http.get(host + path, function (result) {
                   console.log('Success, with: ' + result.statusCode);

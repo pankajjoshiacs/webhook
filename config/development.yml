@@ -14,3 +14,6 @@ productDB:
   user: user
   pass: passwd
 
+service:
+  host: your_host_url
+  path: /path/to/your/server/where/events/will/be/processed
