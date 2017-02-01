@@ -1,0 +1,38 @@
+{
+  "name": "webhooks",
+  "version": "1.0.0",
+  "description": "Webhook Receiver will receive event from API server when any changes happens in the Project",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "config": "^1.24.0",
+    "curlrequest": "^1.0.1",
+    "debug": "^2.2.0",
+    "del": "^2.2.2",
+    "express": "^4.13.4",
+    "js-yaml": "^3.7.0",
+    "morgan": "^1.6.1",
+    "mysql": "^2.12.0",
+    "promise": "^7.1.1",
+    "querystring": "^0.2.0",
+    "request": "^2.79.0",
+    "request-promise": "^3.0.0",
+    "run-sequence": "^1.2.2",
+    "yargs": "^4.8.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Enter_your_git_repository_path_here"
+  },
+  "author": "Pankaj Joshi",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}

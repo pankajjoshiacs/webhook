@@ -1,0 +1,16 @@
+type:
+  user: userDB
+  product: productDB
+
+userDB:
+  host: user-db-host
+  database: user-db
+  user: user
+  pass: passwd
+
+productDB:
+  host: product-db-host
+  database: product-db
+  user: user
+  pass: passwd
+
